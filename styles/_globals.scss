@@ -1,0 +1,39 @@
+body {
+  @include fluid-text(19, 16);
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-weight: 800;
+}
+
+h1 {
+  @include fluid-text(72, 47);
+}
+
+h2 {
+  @include fluid-text(68, 44);
+}
+

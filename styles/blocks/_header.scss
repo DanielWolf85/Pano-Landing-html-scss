@@ -1,0 +1,52 @@
+.header {
+  padding-top: 30px;
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 35px;
+    padding: 0 43px
+  }
+
+  &__menu{
+    margin-left: auto;
+    font-size: 17px;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 44px;
+    }
+
+    &-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 38px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition-duration: inherit;
+      }
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__button {
+    width: 151px;
+    height: 45px;
+  }
+}
